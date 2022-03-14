@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC repair</title>
+</head>
+<div class="container">
+<header class="header">
+    <h1 id="title" class="text-center">PC Repair Client Form</h1>
+    <p id="description" class="description text-center">Please fill out the following form to help us
+        identify the issue!
+    </p>
+</header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" 
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required>
+        </div>
+
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" 
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required>
+        </div>
+
+        <div class="form-group">
+            <label id="pcnumber-label" for="number">Number of computers to repair</label>
+            <input type="number" 
+            name="pcnumber"
+            id="number"
+            min="1"
+            max="10"
+            class="form-control"
+            placeholder="Number of computers"
+            >
+        </div>
+
+        <div class="form-group">
+            <p>What is the main use of the computer?</p>
+            <select id="dropdown" name="mainuse" class="form-control" required>
+                <option disabled selected value>Select main use</option>
+                <option value="gaming">Gaming</option>    
+                <option value="office">Office</option>
+                <option value="school">School</option>
+                <option value="movies">Movies</option>
+                <option value="server">Server</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p>What type of computer is it?</p>
+            <label>
+                <input
+                name="pctype"
+                value="desktop"
+                type="radio"
+                class="input-radio"
+                checked>Desktop
+            </label>
+            <label>
+                <input
+                name="pctype"
+                value="Laptop"
+                type="radio"
+                class="input-radio"
+                checked>Laptop
+            </label>
+            <label>
+                <input
+                name="pctype"
+                value="All-In-One"
+                type="radio"
+                class="input-radio"
+                checked>All-In-One
+            </label>
+        </div>
+
+        <div class="form-group">
+            <p>Have you done any of the following?
+            <span class="clue">(Check all that apply)</span>
+            </p>
+            <label>
+                <input
+                name="done"
+                value="change-thermal-paste"
+                type="checkbox"
+                class="input-checkbox">Changed the thermal paste
+            </label>
+            <label>
+                <input
+                name="done"
+                value="replace-component"
+                type="checkbox"
+                class="input-checkbox">Replaced a component
+            </label>
+            <label>
+                <input
+                name="done"
+                value="other-tech"
+                type="checkbox"
+                class="input-checkbox">Saw another technician
+            </label>
+            <label>
+                <input
+                name="done"
+                value="none-of-the-above"
+                type="checkbox"
+                class="input-checkbox">None of the above
+            </label>
+        </div>
+
+        <div class="form-group">
+            <p>Any additional details?</p>
+            <textarea 
+            id="comments"
+            class="input-text-area"
+            name="comment"
+            placeholder="Enter additional details here...">
+        </textarea>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
+</div>
+</html>
